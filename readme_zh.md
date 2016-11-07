@@ -30,65 +30,19 @@
 
 这里三种输出格式的一些组合是被禁用的。例如，'吕'：
 
-<table>
-    <tr>
-        <th colspan="4" align="center">LOWERCASE</th>
-    </tr>
-    <tr>
-        <td>Combination</td>
-        <td>WITH_U_AND_COLON</td>
-        <td>WITH_V</td>
-        <td>WITH_U_UNICODE</td>
-    </tr>
-    <tr>
-        <td>WITH_TONE_NUMBER</td>
-        <td>lu:3</td>
-        <td>lv3</td>
-        <td>l&#252;3</td>
-    </tr>
-    <tr>
-        <td>WITHOUT_TONE</td>
-        <td>lu:</td>
-        <td>lv</td>
-        <td>l&#252;</td>
-    </tr>
-    <tr>
-        <td>WITH_TONE_MARK</td>
-        <td>Exception</td>
-        <td>Exception</td>
-        <td>l&#474;</td>
-    </tr>
-</table>
+|LOWERCASE||||
+|----|----|----|----|
+|Combination|WITH_U_AND_COLON|WITH_V|WITH_U_UNICODE|
+|WITH_TONE_NUMBER|lu:3|lv3|l&#252;3|
+|WITHOUT_TONE|lu:|lv|l&#252;|
+|WITH_TONE_MARK|Exception|Exception|l&#474;|
 
-<table>
-    <tr>
-        <th colspan="4" align="center">UPPERCASE</th>
-    </tr>
-    <tr>
-        <td>Combination</td>
-        <td>WITH_U_AND_COLON</td>
-        <td>WITH_V</td>
-        <td>WITH_U_UNICODE</td>
-    </tr>
-    <tr>
-        <td>WITH_TONE_NUMBER</td>
-        <td>LU:3</td>
-        <td>LV3</td>
-        <td>L&#220;3</td>
-    </tr>
-    <tr>
-        <td>WITHOUT_TONE</td>
-        <td>LU:</td>
-        <td>LV</td>
-        <td>L&#220;</td>
-    </tr>
-    <tr>
-        <td>WITH_TONE_MARK</td>
-        <td>Exception</td>
-        <td>Exception</td>
-        <td>L&#473;</td>
-    </tr>
-</table>
+|UPPERCASE||||
+|----|----|----|----|
+|Combination|WITH_U_AND_COLON|WITH_V|WITH_U_UNICODE|
+|WITH_TONE_NUMBER|LU:3|LV3|L&#220;3|
+|WITHOUT_TONE|LU:|LV|L&#220;|
+|WITH_TONE_MARK|Exception|Exception|L&#473;|
 
 #### Numerals in place of tone marks (声调号的数字表示)
 
@@ -226,15 +180,15 @@ public class MainActivity extends AppCompatActivity {
 
 * PinyinUtils.java
 
-PinyinUtils类中提供了五组可以配置的操作模式用于返回特定格式的字符串，不同组之间的选项可以使用逻辑运算或运算|进行组合以达到想要的格式。
+PinyinUtils类中提供了五组可以配置的操作模式用于返回特定格式的字符串，不同组之间的选项可以使用逻辑运算或运算 `|` 进行组合以达到想要的格式。
 **注：** 组内选项之间是有优先级的，数值越小优先级越高，当使用了一组内的多个选项，只有优先级高的选项才会生效。
 
 配置使用例子：
 
 ```java
 // 和道一文字 => hedaoyiwenzi        // NONE
-// 和道一文字 => HDYWZ               // CASE_UPPERCASE | LETTER_FIRST    or CASE_CAPITALIZE | LETTER_FIRST
-// 和道一文字 => ZWYDH               // CASE_UPPERCASE | LETTER_LAST_INV or CASE_CAPITALIZE | LETTER_LAST_INV
+// 和道一文字 => HDYWZ               // CASE_UPPERCASE | LETTER_FIRST     or CASE_CAPITALIZE | LETTER_FIRST
+// 和道一文字 => ZWYDH               // CASE_UPPERCASE | LETTER_FIRST_INV or CASE_CAPITALIZE | LETTER_FIRST_INV
 // 和道一文字 => HeDaoYiWenZi        // CASE_CAPITALIZE
 // 和道一文字 => He Dao Yi Wen Zi    // CASE_CAPITALIZE | SEPARATOR_BLANK
 ```

@@ -126,7 +126,7 @@ public class PinyinUtils {
 //
 // 和道一文字 => hedaoyiwenzi        // NONE
 // 和道一文字 => HDYWZ               // CASE_UPPERCASE | LETTER_FIRST    or CASE_CAPITALIZE | LETTER_FIRST
-// 和道一文字 => ZWYDH               // CASE_UPPERCASE | LETTER_LAST_INV or CASE_CAPITALIZE | LETTER_LAST_INV
+// 和道一文字 => ZWYDH               // CASE_UPPERCASE | LETTER_FIRST_INV or CASE_CAPITALIZE | LETTER_FIRST_INV
 // 和道一文字 => HeDaoYiWenZi        // CASE_CAPITALIZE
 // 和道一文字 => He Dao Yi Wen Zi    // CASE_CAPITALIZE | SEPARATOR_BLANK
 */
