@@ -87,7 +87,11 @@ Some combinations of these three output formats are forbidden. For example, '吕
 |Fourth|grave accent (&#96;)|4|m&#224;|ma4|
 
 ## Links:
+
 **[Combination of output format options](http://pinyin4j.sourceforge.net/html/combination.html)**
+
 **[Unicode&reg; character table](http://unicode-table.com/en/#control-character)**
+
 **[Pinyin](https://en.wikipedia.org/wiki/Pinyin)**
+
 **[pinyin4j](http://pinyin4j.sourceforge.net/)**
